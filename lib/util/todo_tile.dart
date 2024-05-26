@@ -25,10 +25,33 @@ class ToDoTile extends StatelessWidget {
           SlidableAction(onPressed: deleteFunction,
           icon: Icons.delete,
           backgroundColor: Colors.red,
-          borderRadius: BorderRadius.circular(14),)
+          borderRadius: BorderRadius.circular(48),)
         ]),
         child: Container(
           padding: EdgeInsets.all(24),
+          decoration: BoxDecoration(
+              color: Colors.deepPurple[300],
+              borderRadius: BorderRadius.circular(48),
+              boxShadow: [BoxShadow(
+                color: Colors.deepPurple.shade700,
+                offset: Offset(0, 4),
+                blurRadius: 15,
+                spreadRadius: 1,
+              ),
+            BoxShadow(
+              color: Colors.deepPurple.shade200,
+              offset: Offset(0, -4),
+              blurRadius: 15,
+              spreadRadius: 1,
+            ),],
+            gradient: LinearGradient(begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [
+                  Colors.deepPurple.shade200,
+                  Colors.deepPurple.shade400
+                ],
+            stops: [0.1, 0.9])
+          ),
           child: Row(
             children: [
               Checkbox(
@@ -43,8 +66,7 @@ class ToDoTile extends StatelessWidget {
                           : TextDecoration.none)),
             ],
           ),
-          decoration: BoxDecoration(
-              color: Colors.deepPurple, borderRadius: BorderRadius.circular(12)),
+
         ),
       ),
     );

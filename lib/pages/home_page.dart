@@ -62,7 +62,7 @@ void deleteTask(int index){
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.deepPurple[200],
+      backgroundColor: Colors.deepPurple[300],
       appBar: AppBar(
         title: Text('TO DO'),
         elevation: 0,
