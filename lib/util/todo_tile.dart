@@ -25,23 +25,23 @@ class ToDoTile extends StatelessWidget {
           SlidableAction(onPressed: deleteFunction,
           icon: Icons.delete,
           backgroundColor: Colors.red,
-          borderRadius: BorderRadius.circular(48),)
+          borderRadius: BorderRadius.circular(32),)
         ]),
         child: Container(
           padding: EdgeInsets.all(24),
           decoration: BoxDecoration(
               color: Colors.deepPurple[300],
-              borderRadius: BorderRadius.circular(48),
+              borderRadius: BorderRadius.circular(32),
               boxShadow: [BoxShadow(
                 color: Colors.deepPurple.shade700,
                 offset: Offset(0, 4),
-                blurRadius: 15,
+                blurRadius: 10,
                 spreadRadius: 1,
               ),
             BoxShadow(
               color: Colors.deepPurple.shade200,
               offset: Offset(0, -4),
-              blurRadius: 15,
+              blurRadius: 10,
               spreadRadius: 1,
             ),],
             gradient: LinearGradient(begin: Alignment.topCenter,
@@ -50,7 +50,7 @@ class ToDoTile extends StatelessWidget {
                   Colors.deepPurple.shade200,
                   Colors.deepPurple.shade400
                 ],
-            stops: [0.1, 0.9])
+            stops: [0.05, 0.95])
           ),
           child: Row(
             children: [
